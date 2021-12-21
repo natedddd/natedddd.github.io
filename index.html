@@ -1,12 +1,60 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Website</title>
-        
+        <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <title>Nate Doggett</title>
+        <link rel="stylesheet" href="styles.css">
 
+        <!-- Font from Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+        <!-- Style for menu for smaller screens -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
     <body>
-        This is my personal website and I am very excited
+        <section class="header">
+            <nav>
+                <a href="index.html"><img src="images/image_handler.png"></a>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times-circle" onclick="hideMenu()"></i>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">ABOUT</a></li>
+                        <li><a href="">PROJECTS</a></li>
+                        <li><a href="">CONTACT</a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="showMenu()"></i>
+
+            </nav>
+            <div class="text-box">
+                <h1>Hello, my name is Nate</h1>
+                <p> 
+                    I am currently <br>a junior at VT
+                </p>
+                <a href="" class="hero-btn">Looking forward to saying hello</a>
+            </div>
+        </section>
+        <section class="intro">
+            <h1>Hello, my name is Nate</h1>
+        </section>
+
+        <!---- Javascript for open/close menu ---->
+        <script>
+            var navLinks = document.getElementById("navLinks");
+
+            function showMenu() {
+                navLinks.style.right = "0"
+            }
+
+            function hideMenu() {
+                navLinks.style.right = "-200px";
+            }
+        </script>
+
+
     </body>
 
 
